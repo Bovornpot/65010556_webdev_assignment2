@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Config</title>
+    <link rel="stylesheet" href="styles.css"> <!-- เชื่อมโยงกับไฟล์ CSS -->
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">View Config</a></li> <!-- ลิงก์ไปยังหน้า View Config -->
+            <li><a href="temp_log_form.html">Log Temperature</a></li> <!-- ลิงก์ไปยังหน้า Log Temperature -->
+            <li><a href="view_logs.html">View Logs</a></li> <!-- ลิงก์ไปยังหน้า View Logs -->
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Drone Configuration</h1>
+        <div id="drone-config"></div>
+        <script>
+            fetch('http://3.107.190.248:3000/configs/5')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('drone-config').innerHTML = `
+                        <p>Drone ID: ${data.drone_id || 'N/A'}</p>
+                        <p>Drone Name: ${data.drone_name || 'N/A'}</p>
+                        <p>Light: ${data.light || 'N/A'}</p>
+                        <p>Maximum Speed: ${data.max_speed || 'N/A'}</p>
+                        <p>Country: ${data.country || 'N/A'}</p>
+        `;
+    })
+    .catch(error => console.error('Error:', error));
+
+        </script>
+    </div>
+</body>
+</html>
