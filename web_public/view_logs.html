@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Logs</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script2.js" defer></script> <!-- เพิ่ม script2.js ที่นี่ -->
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">View Config</a></li>
+            <li><a href="temp_log_form.html">Log Temperature</a></li>
+            <li><a href="view_logs.html">View Logs</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Drone Logs</h1>
+        <table id="logs-table">
+            <thead>
+                <tr>
+                    <th>Created</th>
+                    <th>Country</th>
+                    <th>Drone ID</th>
+                    <th>Drone Name</th>
+                    <th>Celsius</th>
+                </tr>
+            </thead>
+            <tbody></tbody> <!-- ต้องมี tbody -->
+        </table>
+        <div class="pagination-controls">
+            <button id="prev-page">Previous</button>
+            <span id="page-number">Page 1</span>
+            <button id="next-page">Next</button>
+        </div>
+    </div>
+    <script src="script2.js"></script> <!-- สคริปต์จะถูกโหลดที่นี่ -->
+</body>
+</html>

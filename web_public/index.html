@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Config</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">View Config</a></li>
+            <li><a href="temp_log_form.html">Log Temperature</a></li>
+            <li><a href="view_logs.html">View Logs</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Drone Config</h1>
+        <input type="text" id="search-drone-id" placeholder="Search Drone ID" oninput="searchDroneConfig()">
+        <table id="config-table">
+            <thead>
+                <tr>
+                    <th>Drone ID</th>
+                    <th>Drone Name</th>
+                    <th>Condition</th>
+                    <th>Light</th>
+                    <th>Max Speed</th>
+                    <th>Country</th>
+                    <th>Population</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="pagination-controls">
+            <button id="prev-page">Previous</button>
+            <span id="page-number">Page 1</span>
+            <button id="next-page">Next</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
