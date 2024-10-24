@@ -1,5 +1,0 @@
-65010556 บวรพจน์ พวงทอง 
-ผมนำไฟล์ server api ต่างๆ upload ขึ้นบน Cloud AWS EC2 แล้วนะครับ
-ผมมีการแก้ไฟล์ API เพื่อให้ใช้กับ Website ให้ง่ายขึ้นนะครับ 
-IP สำหรับ View config --> http://3.107.190.248:3000/configs/5
-IP สำหรับ Log Temp และ View log --> http://3.107.190.248:3000/logs
